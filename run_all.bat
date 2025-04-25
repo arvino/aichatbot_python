@@ -11,6 +11,12 @@ timeout /t 5 /nobreak > nul
 REM Jalankan frontend di jendela baru
 start "Frontend Client" cmd /k run_frontend.bat
 
+REM Tunggu sebentar untuk memastikan frontend cli sudah berjalan
+timeout /t 5 /nobreak > nul
+
+REM Jalankan frontend ui di jendela baru
+start "Frontend UI" cmd /k run_frontend_ui.bat
+
 echo.
 echo Application started successfully!
 echo Backend and Frontend are running in separate windows.
